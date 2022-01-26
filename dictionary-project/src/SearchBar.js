@@ -4,7 +4,7 @@ import Definition from "./Definition";
 
 export default function SearchBar() {
     let [keyword, setKeyword] = useState("");
-    let [result, setResult] = useState({});
+    let [result, setResult] = useState(null);
 
     function handleResponse(response) {
         setResult(response.data[0]);

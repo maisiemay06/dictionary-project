@@ -8,21 +8,18 @@
   z-index: 1;
   box-shadow: 3px 2px 8px grey;
   padding: 15px;
+  padding-top: 30px;
   text-align: center;
-  margin: 0 auto;
+  margin: auto;
   height: 100vh;
 }
-.left .row {
-  height: 50%;
+
+.left input {
+  margin-bottom: 20px;
+  text-align: center;
 }
-.left h2 {
-  margin-bottom: -120px;
-}
-.left form {
-  padding-bottom: 20px;
-}
-.left p {
-  margin-top: -60px;
+.left span {
+  margin-bottom: 30px;
 }
 
 .right {
