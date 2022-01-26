@@ -1,18 +1,35 @@
 import React, { useState } from "react";
+import axios from "axios";
+import Definition from "./Definition";
 
 export default function SearchBar() {
     let [keyword, setKeyword] = useState("");
+    let [result, setResult] = useState({});
+
+    function handleResponse(response) {
+        setResult(response.data[0]);
+    }
+
     function search(event) {
         event.preventDefault();
-        alert("searching")
+        let apiURL = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
+        axios.get(apiURL).then(handleResponse);
+    }
+
+    function handleSearchSubmit(event) {
+        setKeyword(event.target.value);
     }
     
     return (
-        <div className="search row align-items-end">
-            <h2>search</h2>
-            <form onSubmit={search}>
-                <input type="text" autoFocus={true}></input>
-            </form>
+        <div className="left col-4">
+            <div className="search row align-items-end">
+                <h2>search</h2>
+                <form onSubmit={search}>
+                    <input type="text" autoFocus={true} onChange={handleSearchSubmit}></input>
+                </form>
+            </div>
+            <Definition result={result} />
+            
         </div>
     )
 }

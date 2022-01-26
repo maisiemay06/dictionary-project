@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import SearchBar from './SearchBar.js'; 
-import Definition from './Definition';
 import Synonyms from './Synonyms';
 import Images from './Images';
 
@@ -12,10 +11,10 @@ function App() {
         
       </header>
       <main className="row align-items-center h-100">
-        <div className="left col-4">
+        
             <SearchBar />
-            <Definition />
-        </div>
+            
+    
       
         <div className="right col-8 container">
           <div className="shelf row"></div>
