@@ -1,23 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import SearchBar from './SearchBar.js'; 
+import Definition from './Definition';
+import Synonyms from './Synonyms';
+import Images from './Images';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container-fluid">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        
       </header>
+      <main className="row align-items-center h-100">
+        <div className="left col-4">
+            <SearchBar />
+            <Definition />
+        </div>
+      
+        <div className="right col-8 container">
+          <div className="shelf row"></div>
+          <div className="shelf row">
+            <Synonyms />
+          </div>
+          <div className="shelf row">
+            <Images />
+          </div>
+          <div className="shelf row"></div>
+        </div>
+      </main>
     </div>
   );
 }
