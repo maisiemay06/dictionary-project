@@ -1,17 +1,25 @@
 import React from "react";
 
-export default function Synonyms() {
-    return (
-        <div className="synonyms">
-              <h2>synonyms</h2>
-              <h4>book</h4>
-              <h4>encyclopedia</h4>
-              <h4>lexus</h4>
-              <h4>glossary</h4>
-              <h4>etc</h4>
-              <h4>etc</h4>
-              <h4>etc</h4>
-              <h4>etc</h4>
-        </div>
-    )
+export default function Synonyms(props) {
+    if (props.result) {
+        return (
+            <div>
+                <h2>synonyms</h2>
+                <div className="synonyms">
+                    {props.result.meanings[0].definitions[0].synonyms.map(function (synonyms, index) {
+                        if (index < 12) {
+                        return (
+                            <div key={index}>
+                                <h5>{synonyms}</h5>
+                            </div>
+                        )}
+                    })}
+                </div>
+            </div>
+        )
+    } else {
+        return null
+        
+    }
 }
+

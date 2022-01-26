@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Definition from "./Definition";
+import Synonyms from "./Synonyms";
 
 export default function SearchBar() {
     let [keyword, setKeyword] = useState("");
@@ -21,15 +22,21 @@ export default function SearchBar() {
     }
     
     return (
-        <div className="left col-4">
-            <div className="search row align-items-end">
-                <h2>search</h2>
-                <form onSubmit={search}>
-                    <input type="text" autoFocus={true} onChange={handleSearchSubmit}></input>
-                </form>
+        <div className="main-body">
+            <div className="left">
+                <div className="search">
+                    <h2>search</h2>
+                    <form onSubmit={search}>
+                        <input type="text" autoFocus={true} onChange={handleSearchSubmit}></input>
+                    </form>
+                </div>
+                <Definition result={result} />
             </div>
-            <Definition result={result} />
-            
+           <div className="right">
+               
+                <Synonyms result={result} />
+               
+           </div>
         </div>
     )
 }
