@@ -23,20 +23,14 @@ export default function SearchBar() {
     
     return (
         <div className="main-body">
-            <div className="left">
-                <div className="search">
-                    <h2>search</h2>
-                    <form onSubmit={search}>
-                        <input type="text" autoFocus={true} onChange={handleSearchSubmit}></input>
-                    </form>
-                </div>
-                <Definition result={result} />
+            <div className="card search">
+                <h2>search</h2>
+                <form onSubmit={search}>
+                    <input type="text" autoFocus={true} onChange={handleSearchSubmit}></input>
+                </form>
             </div>
-           <div className="right">
-               
-                <Synonyms result={result} />
-               
-           </div>
+            <Definition result={result} />
+            <Synonyms result={result} />
         </div>
     )
 }

@@ -2,10 +2,9 @@ import React from "react";
 import Meaning from "./Meaning.js";
 
 export default function Definition(props) {
-    console.log(props.result);
     if (props.result) {
         return (
-        <div className="definition">
+        <div className="definition card">
             <h1>{props.result.word}</h1>
             {props.result.meanings.map(function (meaning, index) {
                 return (
