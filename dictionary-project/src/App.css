@@ -6,6 +6,7 @@ main {
   width: 100%;
   min-height: 100vh;
   padding-top: 50px;
+  padding-bottom: 50px;
   color: white;
   font-family: 'Open Sans Condensed', sans-serif;
 }
@@ -16,7 +17,7 @@ main {
   margin: auto;
 }
 .card {
-  padding: 10px;
+  padding: 20px 10px;
   margin-bottom: 20px;
   border-radius: 20px;
   box-shadow: 3px 3px 8px black;
@@ -42,6 +43,12 @@ input {
 
 h5 {
   font-weight: bold;
+  margin-top: 1.5em;
+}
+
+.definition p, i {
+  font-size: 1.2em;
+  line-height: 1em;
 }
 
 .synonym-card {
@@ -52,6 +59,5 @@ h5 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   overflow: hidden;
-  padding: 0px 20px;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
