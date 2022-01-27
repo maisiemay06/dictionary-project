@@ -34,6 +34,7 @@ h2, h1 {
 
 input {
   text-align: center;
+  width: 70%;
 }
 
 .definition {
@@ -48,7 +49,7 @@ h5 {
 
 .definition p, i {
   font-size: 1.2em;
-  line-height: 1em;
+  line-height: 1.1em;
 }
 
 .synonym-card {

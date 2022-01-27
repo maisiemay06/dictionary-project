@@ -35,9 +35,9 @@ export default function SearchBar(props) {
         return (
             <div className="main-body">
                 <div className="card search">
-                    <h2>search</h2>
+                    
                     <form onSubmit={handleSearchSubmit}>
-                        <input type="text" autoFocus={true} onChange={handleKeywordChange}></input>
+                        <input type="text" autoFocus={true} onChange={handleKeywordChange} placeholder="search..."></input>
                     </form>
                 </div>
                 <Definition result={result} />
